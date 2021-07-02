@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  --bg: white;
+  --txtColor: rgb(58, 58, 58);
+  --subtitle: grey;
+  --title: black;
+  --main: red;
+  --second: white;
+  --third: black;
+  --gradient1: #ff2361;
+  --gradient2: #ff2020;
+  --gradient3: #ff469f;
+  --gradient4: #ff6062;
+}
+
+.container {
+  width: 100%;
+  min-height: 100%;
+  padding-left: 8%;
+  padding-right: 8%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.navBar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 3.5rem;
+  cursor: pointer;
+  margin: 30px 0;
+}
+
+.menuIcon {
+  width: 2.5rem;
+  cursor: pointer;
+}
+
+nav {
+  flex: 1;
+  text-align: right;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--txtColor);
+  font-weight: 500;
+}
+
+nav ul li a:hover {
+  color: var(--main);
+}
+
+/*Div que abriga as duas colunas de conteúdo principal: */
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*Top and left:*/
+  margin: 4rem 4rem;
+}
+
+/*Coluna 1 - Onde fica o texto: */
+.col1 {
+  flex-basis: 40%;
+  position: relative;
+  margin-left: 0.5rem;
+}
+
+.col1 h2 {
+  font-size: 3rem;
+}
+
+.col1 h3 {
+  font-size: 1.5rem;
+  color: var(--txtColor);
+  font-weight: 100;
+  margin: 0.2rem 0 0.1rem;
+}
+
+.col1 p {
+  font-size: 1rem;
+  color: var(--txtColor);
+  font-weight: 100;
+}
+
+.col1 h4 {
+  margin: 1rem 0;
+  font-size: 20px;
+}
+
+button {
+  width: 140px;
+  border: none;
+  padding: 12px 10px;
+  outline: none;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  background: linear-gradient(to right, var(--gradient1), var(--gradient2));
+  transition: width 0.5s;
+}
+
+button img {
+  width: 30px;
+  display: none;
+}
+
+button:hover img {
+  display: block;
+}
+button:hover {
+  width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*Barrinha vertical ao lado do título: */
+.col1::after {
+  content: "";
+  width: 8px;
+  height: 60%;
+  position: absolute;
+  background: linear-gradient(var(--gradient3), var(--gradient4));
+  left: -2rem;
+  top: 1rem;
+}
+
+/*Coluna 2 - Onde fica o controle: */
+.col2 {
+  position: relative;
+  flex-basis: 60%;
+  display: flex;
+  align-items: center;
+}
+
+.col2 .controller {
+  width: 90%;
+}
+
+.controllerBackground {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 20px 0 0 20px;
+  height: 100%;
+  width: 80%;
+  background: linear-gradient(var(--gradient3), var(--gradient4));
+  z-index: -1;
+  display: flex;
+  transform: translate(11rem);
+}
+
+.addCartBtn img {
+  width: 35px;
+  margin-bottom: 5px;
+}
+
+.addCartBtn {
+  text-align: center;
+  color: var(--second);
+  cursor: pointer;
+}
