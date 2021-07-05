@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sony WebStore</title>
+    <title>Playstation WebStore</title>
     <link rel="stylesheet" href="assets/styles.css" />
     <link rel="icon" href="assets/images/logo.svg" />
   </head>
+
   <body>
     <main class="container">
       <div class="navBar">
@@ -58,21 +59,21 @@
         <img src="assets/images/tw.svg" alt="TwitterIconLink" />
       </div>
     </main>
-
-    <script>
-      let menuLinks = document.getElementById("menuLinks");
-      /* Deixa a altura do dropdown do 
-      menu hambúrguer como 0 por padrão: */
-      menuLinks.style.maxHeight = "0px";
-
-      /* Função que ativa o dropdown pelo maxHeight da ul: */
-      function toggleMenu() {
-        if (menuLinks.style.maxHeight == "0px") {
-          menuLinks.style.maxHeight = "130px";
-        } else {
-          menuLinks.style.maxHeight = "0px";
-        }
-      }
-    </script>
   </body>
+
+  <script>
+    let menuLinks = document.getElementById("menuLinks");
+    /* Deixa a altura do dropdown do 
+    menu hambúrguer como 0 por padrão: */
+    menuLinks.style.maxHeight = "0px";
+
+    /* Função que ativa o dropdown pelo maxHeight da ul: */
+    function toggleMenu() {
+      if (menuLinks.style.maxHeight == "0px") {
+        menuLinks.style.maxHeight = "130px";
+      } else {
+        menuLinks.style.maxHeight = "0px";
+      }
+    }
+  </script>
 </html>
