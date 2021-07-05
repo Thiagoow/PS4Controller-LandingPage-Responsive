@@ -185,8 +185,7 @@ button:hover {
   text-align: center;
 }
 
-/*Responsive queries: */
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 900px) {
   /*Estilização menu dropdown hambúrguer: */
   nav ul {
     width: 90%;
@@ -206,15 +205,57 @@ button:hover {
   nav ul li a {
     color: var(--second);
   }
-  /* Reverte o display: none; do 
-  botão de menu hambúrguer */
-  .menuIcon {
-    display: block;
-  }
   /* Deixando a aparição do menu dropdown suave: */
   #menuLinks {
     overflow: hidden;
     transition: 0.5s;
+  }
+
+  /*Menu hambúrguer animado: */
+  .menu {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    /* Reverte o display: none; do 
+  botão de menu hambúrguer */
+    display: flex;
+    padding: 0;
+    visibility: visible;
+  }
+  /*Estilização das linhas do menu hambúrguer:*/
+  .line {
+    fill: none;
+    stroke: black;
+    stroke-width: 6;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .line1 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+  }
+  .line2 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+  }
+  .line3 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+  }
+  .opened .line1 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+  }
+  .opened .line2 {
+    stroke-dasharray: 1 60;
+    stroke-dashoffset: -30;
+    stroke-width: 6;
+  }
+  .opened .line3 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
   }
 
   /* Responsivando o resto da landing page: */
@@ -257,5 +298,10 @@ button:hover {
   }
   .socialLinks {
     margin-top: 4rem;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .menu {
+    display: none;
   }
 }
