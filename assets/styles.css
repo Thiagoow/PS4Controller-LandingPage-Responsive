@@ -86,7 +86,7 @@ nav ul li a:hover {
 .col1 h3 {
   font-size: 1.5rem;
   color: var(--txtColor);
-  font-weight: 100;
+  font-weight: 500;
   margin: 0.2rem 0 0.1rem;
 }
 
@@ -279,7 +279,6 @@ button:hover {
   }
   .col1 h3 {
     font-size: 1.1rem;
-    font-weight: 500;
   }
   .col1 p {
     font-size: 0.8rem;
