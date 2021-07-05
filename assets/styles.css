@@ -186,10 +186,10 @@ button:hover {
 }
 
 @media only screen and (max-width: 900px) {
-  /*Estilização menu dropdown hambúrguer: */
+  /* Estilização menu dropdown hambúrguer: */
   nav ul {
-    width: 90%;
-    /* height: 10rem; */
+    width: 100%;
+    height: 7rem;
     background: linear-gradient(var(--gradient3), var(--gradient4));
     position: absolute;
     top: 5rem;
@@ -197,9 +197,10 @@ button:hover {
     z-index: 2;
   }
   nav ul li {
-    /*Deixa os links na vertical: */
+    /* Deixa os links na vertical: */
     display: block;
-    margin-top: 0.1rem;
+    /* Espaçamento entre os links: */
+    margin-top: 0.5rem;
     margin-bottom: 0.1rem;
   }
   nav ul li a {
@@ -211,7 +212,7 @@ button:hover {
     transition: 0.5s;
   }
 
-  /*Menu hambúrguer animado: */
+  /* Menu hambúrguer animado: */
   .menu {
     background-color: transparent;
     border: none;
