@@ -279,9 +279,10 @@ button:hover {
   }
   .col1 h3 {
     font-size: 1.1rem;
+    font-weight: 500;
   }
   .col1 p {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   .col2 {
     flex-basis: 100%;
