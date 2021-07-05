@@ -39,6 +39,7 @@
 .menuIcon {
   width: 2.5rem;
   cursor: pointer;
+  display: none;
 }
 
 nav {
@@ -59,7 +60,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: var(--main);
+  color: var(--third);
 }
 
 /*Div que abriga as duas colunas de conteúdo principal: */
@@ -182,4 +183,79 @@ button:hover {
 
 .socialLinks {
   text-align: center;
+}
+
+/*Responsive queries: */
+@media only screen and (max-width: 700px) {
+  /*Estilização menu dropdown hambúrguer: */
+  nav ul {
+    width: 90%;
+    /* height: 10rem; */
+    background: linear-gradient(var(--gradient3), var(--gradient4));
+    position: absolute;
+    top: 5rem;
+    right: 0;
+    z-index: 2;
+  }
+  nav ul li {
+    /*Deixa os links na vertical: */
+    display: block;
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+  }
+  nav ul li a {
+    color: var(--second);
+  }
+  /* Reverte o display: none; do 
+  botão de menu hambúrguer */
+  .menuIcon {
+    display: block;
+  }
+  /* Deixando a aparição do menu dropdown suave: */
+  #menuLinks {
+    overflow: hidden;
+    transition: 0.5s;
+  }
+
+  /* Responsivando o resto da landing page: */
+  .logo {
+    width: 3rem;
+  }
+  .menuIcon {
+    width: 2rem;
+  }
+  .row {
+    flex-direction: column-reverse;
+    margin: 0.5rem 0;
+    margin-top: 2rem;
+  }
+  .col1 {
+    flex-basis: 100%;
+  }
+  .col1 h2 {
+    font-size: 2rem;
+  }
+  .col1 h3 {
+    font-size: 1.1rem;
+  }
+  .col1 p {
+    font-size: 1rem;
+  }
+  .col2 {
+    flex-basis: 100%;
+    margin-bottom: 0.5rem;
+  }
+  .col2 .controller {
+    width: 70%;
+  }
+  .controllerBackground {
+    transform: translate(75px);
+    height: 85%;
+  }
+  .addCartBtn img {
+    margin-top: -1.5rem;
+  }
+  .socialLinks {
+    margin-top: 4rem;
+  }
 }

@@ -12,14 +12,19 @@
       <div class="navBar">
         <img src="assets/images/logo.svg" class="logo" />
         <nav>
-          <ul>
+          <ul id="menuLinks">
             <li><a href="">Controles para Games</a></li>
             <li><a href="">Acessórios VR</a></li>
             <li><a href="">Controles de mídia</a></li>
             <li><a href="">Outros</a></li>
           </ul>
         </nav>
-        <img src="assets/images/menu.png" class="menuIcon" />
+        <!--Quando clicarmos no menu, abre o dropdown com links: -->
+        <img
+          src="assets/images/menu.png"
+          class="menuIcon"
+          onclick="toggleMenu()"
+        />
       </div>
 
       <div class="row">
@@ -53,5 +58,21 @@
         <img src="assets/images/tw.svg" alt="TwitterIconLink" />
       </div>
     </main>
+
+    <script>
+      let menuLinks = document.getElementById("menuLinks");
+      /* Deixa a altura do dropdown do 
+      menu hambúrguer como 0 por padrão: */
+      menuLinks.style.maxHeight = "0px";
+
+      /* Função que ativa o dropdown pelo maxHeight da ul: */
+      function toggleMenu() {
+        if (menuLinks.style.maxHeight == "0px") {
+          menuLinks.style.maxHeight = "130px";
+        } else {
+          menuLinks.style.maxHeight = "0px";
+        }
+      }
+    </script>
   </body>
 </html>
