@@ -10,4 +10,4 @@ tendo como base o <a href="https://www.youtube.com/watch?v=lAOkx2yZESY" target="
 do canal do Youtube: <a href="https://www.youtube.com/channel/UCkjoHfkLEy7ZT4bA2myJ8xA" target="_blank">
 Easy Tutorials</a></p>
 
-## Demo: https://ps4controller-landingpage.netlify.app/
+## Demo: https://ps4-controller.vercel.app
